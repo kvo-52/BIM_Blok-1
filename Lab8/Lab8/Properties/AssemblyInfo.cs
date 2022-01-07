@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("Lab8.2")]
+[assembly: AssemblyTitle("Lab8")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Lab8.2")]
+[assembly: AssemblyProduct("Lab8")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("60a00f77-5d64-421f-86ed-135f07173118")]
+[assembly: Guid("3762f7c6-a0fe-4cf6-a805-e4f5c9171264")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

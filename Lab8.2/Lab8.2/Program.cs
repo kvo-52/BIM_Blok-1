@@ -7,15 +7,35 @@ using System.IO;
 
 namespace Lab8._2
 {
-     class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            string path = "logs2/log.txt";
-            StreamWriter sw = new StreamWriter(parh, v);
-            sw.WriteLine("Старт программы");
-            sw.WriteLine("Ошибка");
-            sw.Flush();
+            //Задача 8.2. Сумма случайных чисел во вновь созданном файле
+            string path = "I:/BIM/HomeWork/Lab8.2/Task_8-2.txt";
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+            }
+            StreamWriter sw = new StreamWriter(path);
+            int[] number = new int[10];
+            Random random = new Random();
+            foreach (int a in number)
+            {
+                sw.WriteLine("{0} ", random.Next(0, 10));
+            }
+            sw.Close();
+
+
+            int[] sum = File.ReadAllLines(path).Select(int.Parse).ToArray();
+            int sum1 = sum.Sum();
+
+
+            Console.WriteLine(File.ReadAllText(path));
+            Console.WriteLine(sum1);
+
+            Console.ReadKey();
+
         }
     }
 }

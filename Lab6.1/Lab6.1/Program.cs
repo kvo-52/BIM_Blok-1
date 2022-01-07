@@ -17,38 +17,29 @@ namespace Lab6._1
             // Вводим фразу с клавиатуры
             string stringStart = Console.ReadLine();
             Console.WriteLine();
-            // Разбиваем фразу на слова
-            string[] stingArray = stringStart.Split();
-            // Считаем количество слов в предложении
-            int SumWord = 0;
-            foreach (string s in stingArray)
-            {
-                SumWord++;
-            }
-            Console.WriteLine("Количество слов в предложении равно {0}", SumWord);
+            // Разбиваем фразу на слова. Считаем количество слов в предложении
             // Создаем массив из длин слов и находим самое длинное слово
+            string[] stingArray = stringStart.Split();
+            int SumWord = 0;
             int[] arrayLength = new int[SumWord];
             int max = 0;
+            int slovo = 0;    
+            
             foreach (string s in stingArray)
-            {
+            {    
+                SumWord++;
+               
                 int n = Convert.ToInt32(s.Length);
-                if (n > max)
+                if (n > max || n==max )
                     max = n;
-            }
+               Console.Write("{0} ", s);
+               
+             }
+            Console.Write("Самое длинное слово: ", slovo);
+            Console.WriteLine();
             Console.WriteLine("Количество знаков в самом длинном слове равно {0}", max);
             Console.WriteLine();
-            // Выводим саме длинные слова
-            Console.Write("Самое длинное слово: ");
-            int colWord = 0;
-            foreach (string s in stingArray)
-            {
-                int n = Convert.ToInt32(s.Length);
-                if (n == max)
-                {
-                    colWord++;
-                    Console.Write("{0} ", s);
-                }
-            }
+            Console.WriteLine("Количество слов в предложении равно {0}", SumWord);
             Console.WriteLine();
             Console.Write("Для завершения программы нажмите любую клавишу");
             Console.ReadKey();
